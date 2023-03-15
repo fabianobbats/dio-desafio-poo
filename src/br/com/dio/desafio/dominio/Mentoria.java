@@ -1,6 +1,7 @@
 package br.com.dio.desafio.dominio;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Mentoria extends Conteudo {
     private LocalDate dataMentoria;
@@ -28,7 +29,7 @@ public class Mentoria extends Conteudo {
         return "Mentoria{" +
                 "titulo='" + titulo + '\'' +
                 ", descricao='" + descricao + '\'' +
-                ", dataMentoria=" + dataMentoria +
+                ", dataMentoria=" + dataMentoria.format(DateTimeFormatter.ofPattern("dd/MM/YYYY")) +
                 '}';
     }
 
